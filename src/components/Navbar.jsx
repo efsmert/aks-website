@@ -22,7 +22,7 @@ const Navbar = () => {
         <nav className={navbarClass}>
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    Alpha Kappa Sigma
+                    ΑΚΣ
                 </Link>
                 <ul className="navbar-links">
                     <li><Link to="/">Home</Link></li>
