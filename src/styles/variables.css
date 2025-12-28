@@ -1,0 +1,109 @@
+:root {
+  /* Colors */
+  --color-primary: #1a472a;
+  /* Deep Forest Green */
+  --color-primary-light: #2d6a4f;
+  --color-primary-dark: #0f2b19;
+  --color-accent: #d4af37;
+  /* Gold */
+  --color-accent-light: #f4d06f;
+  --color-text-main: #f0fdf4;
+  /* Off-white/light green tint */
+  --color-text-muted: #a7f3d0;
+  --color-bg-dark: #05100a;
+  /* Very dark green/black */
+  --color-bg-card: #0b2216;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.8s ease;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Fraternal Background Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    /* Subtle diagonal stripes reminiscent of fraternity regalia */
+    repeating-linear-gradient(45deg,
+      transparent,
+      transparent 40px,
+      rgba(212, 175, 55, 0.015) 40px,
+      rgba(212, 175, 55, 0.015) 41px),
+    /* Greek key pattern inspired subtle grid */
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 60px,
+      rgba(26, 71, 42, 0.08) 60px,
+      rgba(26, 71, 42, 0.08) 62px),
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 60px,
+      rgba(26, 71, 42, 0.08) 60px,
+      rgba(26, 71, 42, 0.08) 62px),
+    /* Corner accent gradients - shield/crest inspired */
+    radial-gradient(ellipse at top left,
+      rgba(212, 175, 55, 0.06) 0%,
+      transparent 40%),
+    radial-gradient(ellipse at bottom right,
+      rgba(26, 71, 42, 0.1) 0%,
+      transparent 40%),
+    /* Base gradient */
+    linear-gradient(170deg,
+      #0a1f14 0%,
+      #05100a 50%,
+      #08160e 100%);
+}
+
+/* Ensure content stays above background pattern */
+body>* {
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
